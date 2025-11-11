@@ -133,14 +133,14 @@ Duration: 10
 
 ### ChatGPT 시작하기
 
-1. **웹사이트 접속**: https://chat.openai.com
+1. **웹사이트 접속**: [https://chat.openai.com](https://chat.openai.com)
 2. **계정 생성 또는 로그인**
    - Google, Microsoft, Apple 계정으로 간편 로그인 가능
 3. **새 대화 시작**: 좌측 상단 "New chat" 클릭
 
 ### Google Gemini 시작하기
 
-1. **웹사이트 접속**: https://gemini.google.com
+1. **웹사이트 접속**: [https://gemini.google.com](https://gemini.google.com)
 2. **Google 계정으로 로그인**
 3. **채팅 시작**: 텍스트 입력창에 바로 질문 입력
 
@@ -692,8 +692,8 @@ Duration: 10
 더 배우고 싶다면:
 
 **프롬프트 엔지니어링**
-- OpenAI Prompt Engineering Guide: https://platform.openai.com/docs/guides/prompt-engineering
-- Learn Prompting (한글): https://learnprompting.org/ko/docs/intro
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [Learn Prompting (한글)](https://learnprompting.org/ko/docs/intro)
 
 **생성형 AI 뉴스**
 - AI 트렌드 코리아: 최신 AI 소식

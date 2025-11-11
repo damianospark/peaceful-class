@@ -44,10 +44,10 @@ Duration: 10
 ### 준비사항
 
 #### 필수 도구 계정 생성
-1. **Notion** (https://notion.so) - 무료 계정
-2. **Canva** (https://canva.com) - 무료 계정
-3. **Excalidraw** (https://excalidraw.com) - 계정 불필요 (선택적 저장)
-4. **Miro** (https://miro.com) - 무료 계정 (선택사항)
+1. **Notion** ([https://notion.so](https://notion.so)) - 무료 계정
+2. **Canva** ([https://canva.com](https://canva.com)) - 무료 계정
+3. **Excalidraw** ([https://excalidraw.com](https://excalidraw.com)) - 계정 불필요 (선택적 저장)
+4. **Miro** ([https://miro.com](https://miro.com)) - 무료 계정 (선택사항)
 
 #### 준비물
 - 4강에서 작성한 사업계획서
@@ -158,7 +158,7 @@ Duration: 15
 ### Notion 시작하기
 
 #### Step 1: 계정 생성
-1. https://notion.so 접속
+1. [https://notion.so](https://notion.so) 접속
 2. "Get Notion free" 클릭
 3. 이메일 또는 Google 계정으로 가입
 4. 용도 선택: "For personal use" 선택
@@ -180,7 +180,7 @@ Duration: 15
 ### Canva 시작하기
 
 #### Step 1: 계정 생성
-1. https://canva.com 접속
+1. [https://canva.com](https://canva.com) 접속
 2. "Sign up" 클릭
 3. Google, Facebook 또는 이메일로 가입
 4. 학생이라면 "Canva for Education" 신청 가능 (무료 Pro 기능)
@@ -201,7 +201,7 @@ Duration: 15
 ### Excalidraw 시작하기
 
 #### Step 1: 접속 (계정 불필요)
-1. https://excalidraw.com 접속
+1. [https://excalidraw.com](https://excalidraw.com) 접속
 2. 바로 그리기 시작 가능!
 
 #### Step 2: 기본 도구 익히기
@@ -234,7 +234,7 @@ Duration: 15
 ### Miro 시작하기 (선택사항)
 
 #### Step 1: 계정 생성
-1. https://miro.com 접속
+1. [https://miro.com](https://miro.com) 접속
 2. "Sign up free" 클릭
 3. 이메일 또는 Google 계정으로 가입
 
@@ -1200,18 +1200,18 @@ Notion으로 자신의 **취업 포트폴리오 페이지**를 만드세요.
 ### 추천 학습 자료
 
 **Notion**
-- Notion 공식 가이드: https://notion.so/help/guides
+- [Notion 공식 가이드](https://notion.so/help/guides)
 - Notion 한국어 커뮤니티: Facebook 그룹 검색
 - YouTube: "Notion 활용법" 검색
 
 **Canva**
-- Canva Design School: https://designschool.canva.com
-- Canva 템플릿 탐색: https://canva.com/templates
+- [Canva Design School](https://designschool.canva.com)
+- [Canva 템플릿 탐색](https://canva.com/templates)
 - YouTube 채널: "Canva" 공식 채널
 
 **Excalidraw**
-- 공식 가이드: https://docs.excalidraw.com
-- Mermaid 문법: https://mermaid.js.org
+- [공식 가이드](https://docs.excalidraw.com)
+- [Mermaid 문법](https://mermaid.js.org)
 - GitHub 예제 모음: Excalidraw Libraries
 
 **협업 트렌드**
