@@ -1,0 +1,29 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-11-11T16:58:18+09:00",
+  "id": "smart-job-lit-04",
+  "duration": 170,
+  "title": "4강 | 생성형 AI 활용: 사업 기획 실습",
+  "authors": "박진우",
+  "summary": "4강 - 생성형 AI 활용: 사업 기획 실습",
+  "source": "/Users/gnoopy/Documents/줌인-취준리터러시/codelab/peaceful-class/source/smart-job-lit-04.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "smart-digital-literacy"
+  ],
+  "tags": [
+    "ai",
+    "business-planning",
+    "chatgpt",
+    "gemini",
+    "prompt-engineering"
+  ],
+  "feedback": "https://github.com/damianospark/peaceful-class/issues/new",
+  "url": "smart-job-lit-04"
+}

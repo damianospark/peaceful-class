@@ -1,0 +1,30 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-11-11T17:05:45+09:00",
+  "id": "smart-job-lit-05",
+  "duration": 180,
+  "title": "5강 | 협업·시각화 도구 활용: 서비스 구체화 실습",
+  "authors": "박진우",
+  "summary": "5강 - 협업·시각화 도구 활용: 서비스 구체화 실습",
+  "source": "/Users/gnoopy/Documents/줌인-취준리터러시/codelab/peaceful-class/source/smart-job-lit-05.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "smart-digital-literacy"
+  ],
+  "tags": [
+    "canva",
+    "collaboration",
+    "excalidraw",
+    "miro",
+    "notion",
+    "visualization"
+  ],
+  "feedback": "https://github.com/damianospark/peaceful-class/issues/new",
+  "url": "smart-job-lit-05"
+}

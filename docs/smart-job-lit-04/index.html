@@ -1,0 +1,765 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>4강 | 생성형 AI 활용: 사업 기획 실습</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab home-url="https://damianospark.github.io/peaceful-class/" codelab-gaid=""
+                  id="smart-job-lit-04"
+                  title="4강 | 생성형 AI 활용: 사업 기획 실습"
+                  environment="web"
+                  feedback-link="https://github.com/damianospark/peaceful-class/issues/new">
+    
+      <google-codelab-step label="오리엔테이션" duration="15">
+        <h2 is-upgraded>개요</h2>
+<p>이 강의에서는 <strong>생성형 AI를 활용한 실무 기획 역량</strong>을 키웁니다. 2025년 취업 시장에서 생성형 AI 활용 능력은 필수 역량이 되었습니다. 단순히 도구를 사용하는 것을 넘어, <strong>프롬프트 엔지니어링을 통해 나만의 경쟁력</strong>을 만들어가는 방법을 배웁니다.</p>
+<h2 is-upgraded>🎯 학습 목표</h2>
+<ol type="1">
+<li>✅ 생성형 AI의 개념과 2025년 트렌드 이해</li>
+<li>✅ 프롬프트 엔지니어링 기본 원리 습득</li>
+<li>✅ 사업 기획서 자동생성 및 검증 실습</li>
+<li>✅ AI 출력물을 나만의 스타일로 가공하는 능력 배양</li>
+</ol>
+<aside class="special"><p> 대학생의 92%가 AI 도구를 학습에 사용 중입니다. 하지만 단순 활용을 넘어 &#39;전략적 활용&#39;이 취업 경쟁력의 핵심입니다. </p>
+</aside>
+<h2 is-upgraded>실습 시나리오</h2>
+<p><strong>사업 아이디어</strong>: 생성형 AI 기반의 저비용 매장 음악 제공 서비스</p>
+<p>이번 강의에서는 위 사업 아이디어를 생성형 AI를 활용하여 구체화하고 기획서를 작성합니다.</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>단계</p>
+</td><td colspan="1" rowspan="1"><p>활동</p>
+</td><td colspan="1" rowspan="1"><p>생성 산출물</p>
+</td><td colspan="1" rowspan="1"><p>도구</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>1. 아이디어 발굴</strong></p>
+</td><td colspan="1" rowspan="1"><p>시장 분석 및 문제점 도출</p>
+</td><td colspan="1" rowspan="1"><p>시장 분석 문서</p>
+</td><td colspan="1" rowspan="1"><p>ChatGPT/Gemini</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>2. 솔루션 설계</strong></p>
+</td><td colspan="1" rowspan="1"><p>서비스 핵심 기능 정의</p>
+</td><td colspan="1" rowspan="1"><p>기능 명세서</p>
+</td><td colspan="1" rowspan="1"><p>ChatGPT/Gemini</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>3. 기획서 작성</strong></p>
+</td><td colspan="1" rowspan="1"><p>사업계획서 초안 생성</p>
+</td><td colspan="1" rowspan="1"><p>사업계획서 (1-2페이지)</p>
+</td><td colspan="1" rowspan="1"><p>ChatGPT/Gemini</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>4. 검증 및 개선</strong></p>
+</td><td colspan="1" rowspan="1"><p>프롬프트 개선 및 보완</p>
+</td><td colspan="1" rowspan="1"><p>최종 기획서</p>
+</td><td colspan="1" rowspan="1"><p>ChatGPT/Gemini</p>
+</td></tr>
+</table>
+<h2 is-upgraded>준비사항</h2>
+<ol type="1">
+<li><strong>필수 도구</strong>: ChatGPT (무료) 또는 Google Gemini (무료) 계정</li>
+<li><strong>권장 도구</strong>: Claude, Grok 등 (선택사항)</li>
+<li><strong>문서 도구</strong>: Google Docs 또는 Notion (결과물 정리용)</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="생성형 AI 이해하기" duration="20">
+        <h2 is-upgraded>생성형 AI란?</h2>
+<p>생성형 AI(Generative AI)는 <strong>텍스트, 이미지, 코드 등을 자동으로 생성</strong>하는 인공지능입니다. 2025년 현재 가장 주목받는 기술 트렌드 중 하나입니다.</p>
+<h2 is-upgraded>주요 생성형 AI 도구</h2>
+<h3 is-upgraded>1. <strong>ChatGPT</strong> (OpenAI)</h3>
+<ul>
+<li>가장 널리 사용되는 대화형 AI</li>
+<li>무료 버전(GPT-3.5)과 유료 버전(GPT-4) 제공</li>
+<li>강점: 자연스러운 대화, 다양한 작업 지원</li>
+</ul>
+<h3 is-upgraded>2. <strong>Google Gemini</strong></h3>
+<ul>
+<li>Google의 차세대 AI 모델</li>
+<li>Google 서비스와 통합</li>
+<li>강점: 검색 결과 연동, 최신 정보 반영</li>
+</ul>
+<h3 is-upgraded>3. <strong>Claude</strong> (Anthropic)</h3>
+<ul>
+<li>윤리적 AI로 평가받는 모델</li>
+<li>강점: 긴 문서 처리, 세밀한 분석</li>
+</ul>
+<h3 is-upgraded>4. <strong>GitHub Copilot</strong></h3>
+<ul>
+<li>코드 생성 특화 AI</li>
+<li>강점: 프로그래밍 작업 지원</li>
+</ul>
+<h2 is-upgraded>프롬프트 엔지니어링 기본</h2>
+<p><strong>프롬프트</strong>는 AI에게 주는 지시문입니다. 좋은 프롬프트가 좋은 결과를 만듭니다.</p>
+<h3 is-upgraded>❌ 나쁜 프롬프트 예시</h3>
+<pre><code>사업 계획서 써줘
+</code></pre>
+<p><strong>문제점</strong>: 너무 모호함, 구체적인 정보 부족</p>
+<h3 is-upgraded>✅ 좋은 프롬프트 예시</h3>
+<pre><code>나는 대학생 창업을 준비 중입니다. 
+&#34;생성형 AI 기반의 저비용 매장 음악 제공 서비스&#34;에 대한 
+사업계획서를 작성하려고 합니다.
+
+다음 항목을 포함해주세요:
+1. 서비스 개요 (3줄)
+2. 타겟 고객 (구체적으로)
+3. 핵심 기능 3가지
+4. 경쟁 우위
+5. 수익 모델
+
+각 항목은 명확하고 간결하게 작성해주세요.
+</code></pre>
+<p><strong>장점</strong>: 역할, 주제, 원하는 결과물이 명확함</p>
+<h2 is-upgraded>프롬프트 작성 4원칙</h2>
+<ol type="1">
+<li>✅ <strong>역할 지정</strong>: &#34;당신은 창업 컨설턴트입니다&#34;</li>
+<li>✅ <strong>맥락 제공</strong>: 배경, 목적, 제약조건 설명</li>
+<li>✅ <strong>구체적 요청</strong>: 원하는 형식, 분량, 스타일 명시</li>
+<li>✅ <strong>예시 제공</strong>: 원하는 결과물의 예시 포함</li>
+</ol>
+<aside class="special"><p> **프롬프트 팁**: AI는 여러분의 의도를 완벽히 이해하지 못합니다. 마치 처음 만난 사람에게 설명하듯 구체적으로 작성하세요. </p>
+</aside>
+<h2 is-upgraded>AI 출력물의 한계</h2>
+<p>생성형 AI는 강력하지만 한계가 있습니다:</p>
+<ul>
+<li>⚠️ <strong>사실 확인 필요</strong>: AI가 만든 정보가 항상 정확하지는 않습니다</li>
+<li>⚠️ <strong>창의성 부족</strong>: AI는 기존 데이터를 조합할 뿐, 진정한 창의성은 사람의 몫</li>
+<li>⚠️ <strong>맥락 이해 제한</strong>: 복잡한 상황이나 뉘앙스를 완벽히 이해하지 못함</li>
+<li>⚠️ <strong>윤리적 검증</strong>: 편향이나 부적절한 내용이 포함될 수 있음</li>
+</ul>
+<p><strong>핵심</strong>: AI는 <strong>도구</strong>입니다. 최종 판단과 책임은 사용자에게 있습니다.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="실습 준비: AI 도구 접속" duration="10">
+        <h2 is-upgraded>ChatGPT 시작하기</h2>
+<ol type="1">
+<li><strong>웹사이트 접속</strong>: https://chat.openai.com</li>
+<li><strong>계정 생성 또는 로그인</strong><ul>
+<li>Google, Microsoft, Apple 계정으로 간편 로그인 가능</li>
+</ul>
+</li>
+<li><strong>새 대화 시작</strong>: 좌측 상단 &#34;New chat&#34; 클릭</li>
+</ol>
+<h2 is-upgraded>Google Gemini 시작하기</h2>
+<ol type="1">
+<li><strong>웹사이트 접속</strong>: https://gemini.google.com</li>
+<li><strong>Google 계정으로 로그인</strong></li>
+<li><strong>채팅 시작</strong>: 텍스트 입력창에 바로 질문 입력</li>
+</ol>
+<aside class="special"><p> **선택 가이드**:  - 처음 사용하는 분 → ChatGPT 추천 (직관적인 UI) - Google 서비스와 연동하고 싶다면 → Gemini 추천 - 두 가지 모두 무료로 사용 가능하니 둘 다 시도해보세요! </p>
+</aside>
+<h2 is-upgraded>실습 환경 구성</h2>
+<p>이번 실습에서는:</p>
+<ol type="1">
+<li><strong>AI 도구</strong>: ChatGPT 또는 Gemini (브라우저 탭 1)</li>
+<li><strong>문서 도구</strong>: Google Docs 또는 Notion (브라우저 탭 2)</li>
+<li><strong>참고 자료</strong>: 이 코드랩 (브라우저 탭 3)</li>
+</ol>
+<p>총 3개의 브라우저 탭을 열어두고 실습을 진행합니다.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="실습 1: 시장 분석 및 문제점 도출" duration="20">
+        <h2 is-upgraded>시나리오</h2>
+<p>&#34;생성형 AI 기반의 저비용 매장 음악 제공 서비스&#34; 아이디어가 떠올랐습니다. 하지만 이것이 정말 시장성이 있는 아이디어인지 확인이 필요합니다.</p>
+<h2 is-upgraded>실습 목표</h2>
+<p>생성형 AI를 활용하여:</p>
+<ol type="1">
+<li>현재 매장 음악 시장의 문제점 파악</li>
+<li>타겟 고객 정의</li>
+<li>우리 서비스가 해결할 수 있는 핵심 문제 도출</li>
+</ol>
+<h2 is-upgraded>Step 1: 시장 조사 프롬프트 작성</h2>
+<p>ChatGPT 또는 Gemini에 다음 프롬프트를 입력하세요:</p>
+<pre><code>당신은 시장 조사 전문가입니다.
+
+한국의 소규모 매장(카페, 식당, 소매점 등)에서 사용하는 
+배경 음악 서비스 시장을 분석해주세요.
+
+다음 내용을 포함해주세요:
+1. 현재 시장 규모와 주요 서비스 (3가지)
+2. 소상공인들이 겪는 주요 문제점 (5가지)
+3. 각 문제점이 발생하는 이유
+4. 시장 기회 (2-3가지)
+
+각 항목은 명확하고 구체적으로 작성해주세요.
+</code></pre>
+<h2 is-upgraded>Step 2: 결과 분석</h2>
+<p>AI가 생성한 결과를 확인하고, Google Docs 또는 Notion에 다음 형식으로 정리하세요:</p>
+<p><strong>[문서 제목: 매장 음악 시장 분석]</strong></p>
+<h3 is-upgraded>현재 시장 상황</h3>
+<ul>
+<li>(AI가 제공한 정보 요약)</li>
+</ul>
+<h3 is-upgraded>주요 문제점</h3>
+<h3 is-upgraded>시장 기회</h3>
+<h2 is-upgraded>Step 3: 추가 질문으로 깊이 파기</h2>
+<p>AI의 답변 중 궁금한 부분이 있다면 추가 질문을 하세요:</p>
+<pre><code>&#34;저작권 문제&#34;에 대해 더 자세히 설명해주세요. 
+소상공인이 실제로 어떤 어려움을 겪나요?
+</code></pre>
+<p>또는</p>
+<pre><code>위에서 언급한 &#34;음악 저작권료&#34;의 실제 비용은 얼마나 되나요?
+한국의 소규모 카페 기준으로 구체적인 금액을 알려주세요.
+</code></pre>
+<aside class="special"><p> **팁**: AI와의 대화는 한 번에 끝나지 않습니다. 초기 답변을 바탕으로 계속 질문하며 정보를 구체화하세요. 이것이 프롬프트 엔지니어링의 핵심입니다. </p>
+</aside>
+<h2 is-upgraded>Step 4: 비판적 검증</h2>
+<p>AI가 제공한 정보를 그대로 믿지 말고, 다음을 확인하세요:</p>
+<ol type="1">
+<li>✅ <strong>사실 확인</strong>: 주요 숫자나 통계는 인터넷 검색으로 재확인</li>
+<li>✅ <strong>최신성</strong>: 정보가 최신인지 확인 (2024-2025년 기준)</li>
+<li>✅ <strong>한국 상황</strong>: 한국 시장에 맞는 정보인지 확인</li>
+</ol>
+<p>의심스러운 부분은 다음과 같이 재질문하세요:</p>
+<pre><code>위에서 언급한 시장 규모 &#34;XX억원&#34;의 출처를 알려주세요.
+만약 정확한 출처가 없다면, 어떻게 추정한 것인지 설명해주세요.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="실습 2: 서비스 핵심 기능 정의" duration="25">
+        <h2 is-upgraded>실습 목표</h2>
+<p>앞서 파악한 문제점을 해결하는 <strong>구체적인 서비스 기능</strong>을 생성형 AI와 함께 설계합니다.</p>
+<h2 is-upgraded>Step 1: 솔루션 설계 프롬프트</h2>
+<pre><code>당신은 IT 서비스 기획자입니다.
+
+&#34;생성형 AI 기반의 저비용 매장 음악 제공 서비스&#34;를 기획하고 있습니다.
+
+이전 분석에서 파악한 문제점:
+1. 높은 음악 저작권료 (월 5-10만원)
+2. 매장 분위기에 맞는 음악 선곡의 어려움
+3. 음악 관리의 번거로움
+4. 제한적인 음악 라이브러리
+5. 시간대별 음악 변경의 어려움
+
+위 문제점을 해결하는 서비스를 설계해주세요:
+
+1. 서비스 이름 제안 (3가지)
+2. 핵심 기능 5가지 (각 기능이 어떤 문제를 해결하는지 명시)
+3. 차별화 포인트 (기존 서비스와 어떻게 다른가?)
+4. 기술 구현 방식 (생성형 AI를 어떻게 활용할 것인가?)
+
+실제 구현 가능한 수준으로 현실적으로 작성해주세요.
+</code></pre>
+<h2 is-upgraded>Step 2: 프롬프트 개선 실습</h2>
+<p>첫 번째 결과가 마음에 들지 않는다면? 프롬프트를 개선하세요!</p>
+<h3 is-upgraded>개선 방법 1: 더 구체적으로</h3>
+<pre><code>특히 &#34;생성형 AI 활용&#34; 부분을 더 구체적으로 설명해주세요.
+어떤 AI 모델을 사용하고, 어떤 데이터로 학습하며, 
+어떻게 저작권 문제를 해결할 것인지 포함해주세요.
+</code></pre>
+<h3 is-upgraded>개선 방법 2: 제약조건 추가</h3>
+<pre><code>서비스 기능을 다시 제안해주세요. 단, 다음 제약조건을 고려해주세요:
+- 예산: 초기 투자 1억원 이하
+- 개발 기간: 6개월 이내
+- 개발 인력: 3명 (개발자 2명, 디자이너 1명)
+- 타겟: 소상공인 (비용 민감)
+</code></pre>
+<h3 is-upgraded>개선 방법 3: 역할 강화</h3>
+<pre><code>당신은 실제로 음악 스타트업을 성공시킨 경험이 있는 
+시리얼 앙트러프러너(serial entrepreneur)입니다.
+
+실전 경험을 바탕으로, 위 서비스 기능 중에서 
+&#34;반드시 포함해야 할 기능&#34;과 &#34;나중에 추가해도 되는 기능&#34;을 
+구분해주세요. 그 이유도 함께 설명해주세요.
+</code></pre>
+<h2 is-upgraded>Step 3: 결과 정리</h2>
+<p>Google Docs에 다음 형식으로 정리하세요:</p>
+<p><strong>[문서 제목: 서비스 기능 명세서]</strong></p>
+<h3 is-upgraded>서비스 이름</h3>
+<ul>
+<li>최종 선택: ________________</li>
+</ul>
+<h3 is-upgraded>핵심 기능 (우선순위 순)</h3>
+<ol type="1">
+<li><strong>[기능명]</strong>: [설명] (해결하는 문제: ___)</li>
+<li><strong>[기능명]</strong>: [설명] (해결하는 문제: ___)</li>
+<li>...</li>
+</ol>
+<h3 is-upgraded>차별화 포인트</h3>
+<h3 is-upgraded>기술 구현 전략</h3>
+<h2 is-upgraded>Step 4: 팀 토론 (선택사항)</h2>
+<p>만약 팀으로 실습 중이라면:</p>
+<ol type="1">
+<li>각자 AI를 통해 도출한 결과를 공유</li>
+<li>서로 다른 프롬프트로 어떻게 다른 결과가 나왔는지 비교</li>
+<li>가장 좋은 아이디어를 조합하여 최종 기능 명세서 작성</li>
+</ol>
+<aside class="special"><p> **인사이트**: 같은 질문이라도 프롬프트 작성 방식에 따라 AI의 답변이 크게 달라집니다. 여러 번 시도하며 최적의 프롬프트를 찾는 것이 핵심입니다. </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="실습 3: 사업계획서 초안 작성" duration="30">
+        <h2 is-upgraded>실습 목표</h2>
+<p>지금까지 정리한 내용을 바탕으로 <strong>투자자 또는 창업 경진대회에 제출할 수 있는 수준의 사업계획서</strong>를 생성합니다.</p>
+<h2 is-upgraded>Step 1: 사업계획서 생성 프롬프트</h2>
+<pre><code>당신은 스타트업 투자심사역(VC)입니다. 
+수백 개의 사업계획서를 검토한 경험이 있습니다.
+
+&#34;생성형 AI 기반의 저비용 매장 음악 제공 서비스&#34;에 대한 
+사업계획서를 작성해주세요.
+
+### 배경 정보:
+- 서비스명: [앞서 정한 이름]
+- 타겟: 한국의 소규모 매장 (카페, 식당, 소매점)
+- 핵심 기능: [앞서 정의한 3-5가지 기능]
+- 차별화: [앞서 정의한 차별화 포인트]
+
+### 작성 요청 사항:
+다음 구조로 A4 2페이지 분량의 사업계획서를 작성해주세요:
+
+1. 사업 개요 (3-4문장)
+2. 시장 기회
+   - 타겟 시장 규모
+   - 성장 가능성
+3. 핵심 서비스
+   - 주요 기능 3가지
+   - 사용자 경험(UX) 흐름
+4. 비즈니스 모델
+   - 수익 구조
+   - 가격 정책
+5. 경쟁 우위
+   - 기존 경쟁사 대비 차별점
+6. 실행 계획
+   - 6개월 로드맵
+   - 필요 자원
+7. 재무 계획 (간단히)
+   - 초기 투자 필요 금액
+   - 손익분기점 예상 시기
+
+각 항목은 구체적이고 현실적으로 작성해주세요.
+투자자가 읽고 바로 이해할 수 있도록 명확하게 작성해주세요.
+</code></pre>
+<h2 is-upgraded>Step 2: 출력물 검토 체크리스트</h2>
+<p>AI가 생성한 사업계획서를 다음 기준으로 검토하세요:</p>
+<h3 is-upgraded>내용 검토</h3>
+<ul>
+<li>[ ] 모든 섹션이 포함되어 있는가?</li>
+<li>[ ] 숫자와 데이터가 구체적인가?</li>
+<li>[ ] 주장에 대한 근거가 명확한가?</li>
+<li>[ ] 실현 가능성이 있는가?</li>
+</ul>
+<h3 is-upgraded>문장 검토</h3>
+<ul>
+<li>[ ] 문장이 명확하고 이해하기 쉬운가?</li>
+<li>[ ] 전문 용어가 과도하지 않은가?</li>
+<li>[ ] 한국어 표현이 자연스러운가?</li>
+<li>[ ] 맞춤법과 띄어쓰기가 정확한가?</li>
+</ul>
+<h3 is-upgraded>설득력 검토</h3>
+<ul>
+<li>[ ] 투자자가 관심을 가질 만한가?</li>
+<li>[ ] 차별화 포인트가 명확한가?</li>
+<li>[ ] 실행 계획이 현실적인가?</li>
+</ul>
+<h2 is-upgraded>Step 3: 나만의 스타일로 수정하기</h2>
+<p>AI가 생성한 문서를 <strong>그대로 사용하지 마세요</strong>. 다음과 같이 개인화하세요:</p>
+<h3 is-upgraded>1. 톤 앤 매너 조정</h3>
+<p>원본 (AI 생성):</p>
+<pre><code>본 서비스는 혁신적인 AI 기술을 통해 음악 산업의 
+패러다임을 전환하고자 합니다.
+</code></pre>
+<p>수정 (더 솔직하고 현실적으로):</p>
+<pre><code>소상공인들이 매달 내는 음악 저작권료, 부담스럽죠? 
+우리는 AI로 생성한 음악으로 이 문제를 해결합니다.
+</code></pre>
+<h3 is-upgraded>2. 구체적인 스토리 추가</h3>
+<p>AI는 일반적인 내용만 생성합니다. 여러분의 경험이나 인터뷰를 추가하세요:</p>
+<pre><code>&#34;강남역 인근 카페를 운영하는 김OO 사장님은 말했습니다.
+&#39;매달 8만원씩 나가는 음악 저작권료가 부담이에요. 
+하지만 음악 없는 카페는 상상할 수 없잖아요.&#39;&#34;
+</code></pre>
+<h3 is-upgraded>3. 비주얼 요소 추가</h3>
+<ul>
+<li>서비스 구조를 간단한 다이어그램으로</li>
+<li>주요 숫자는 시각적으로 강조</li>
+<li>사용자 여정(User Journey)을 그림으로 표현</li>
+</ul>
+<h2 is-upgraded>Step 4: 최종 문서 완성</h2>
+<p>Google Docs에 다음 형식으로 최종 정리:</p>
+<ol type="1">
+<li><strong>표지</strong>: 서비스명, 팀명, 날짜</li>
+<li><strong>본문</strong>: AI 생성 + 여러분의 수정</li>
+<li><strong>부록</strong>: 추가 자료, 참고 링크</li>
+</ol>
+<aside class="special"><p> **중요**: 이 사업계획서는 &#34;AI로 생성했다&#34;는 사실을 명시할 필요는 없지만, 내용에 대한 책임은 여러분에게 있습니다. 모든 정보를 검증하세요. </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="실습 4: 프롬프트 개선 실전" duration="20">
+        <h2 is-upgraded>실습 목표</h2>
+<p>앞서 만든 사업계획서를 <strong>더욱 개선</strong>하기 위한 프롬프트 엔지니어링 실전 연습을 합니다.</p>
+<h2 is-upgraded>시나리오: 부족한 부분 보완하기</h2>
+<p>사업계획서를 검토한 결과, &#34;경쟁 분석&#34; 부분이 약하다는 피드백을 받았습니다.</p>
+<h2 is-upgraded>방법 1: 직접 보완 요청</h2>
+<pre><code>위 사업계획서의 &#34;경쟁 우위&#34; 섹션을 더 강화해주세요.
+
+다음 내용을 추가해주세요:
+1. 주요 경쟁사 3곳 (한국 시장 기준)
+   - 각 경쟁사의 서비스 특징
+   - 가격 정책
+   - 장단점
+2. 우리 서비스와의 비교표
+3. 우리가 이길 수 있는 이유 (구체적인 근거와 함께)
+
+표 형식으로 정리하고, 객관적으로 작성해주세요.
+</code></pre>
+<h2 is-upgraded>방법 2: 역할극 활용</h2>
+<pre><code>당신은 우리 서비스의 가상 경쟁자입니다.
+당신의 임무는 우리 서비스의 약점을 찾아 공격하는 것입니다.
+
+우리 서비스 개요:
+[앞서 작성한 내용 붙여넣기]
+
+다음을 작성해주세요:
+1. 우리 서비스의 5가지 약점
+2. 각 약점을 공략하는 전략
+3. 우리가 실패할 수 있는 시나리오
+
+가능한 냉정하고 비판적으로 분석해주세요.
+</code></pre>
+<p>AI의 답변을 받은 후, 이를 바탕으로 보완책을 마련하세요.</p>
+<h2 is-upgraded>방법 3: 멀티 프롬프트 기법</h2>
+<p>하나의 긴 프롬프트 대신, 여러 개의 짧은 프롬프트로 나누어 질문하세요:</p>
+<p><strong>첫 번째 프롬프트:</strong></p>
+<pre><code>한국의 매장 음악 서비스 시장의 주요 경쟁사를 5곳 나열해주세요.
+각 회사명과 서비스명을 표로 정리해주세요.
+</code></pre>
+<p><strong>두 번째 프롬프트:</strong></p>
+<pre><code>위에서 언급한 5개 서비스 중, 
+&#34;멜론 비즈니스&#34;와 &#34;네이버 VIBE 비즈&#34;에 대해 
+더 자세히 분석해주세요:
+- 제공 음악 수
+- 월 이용료
+- 주요 기능
+- 사용자 리뷰
+</code></pre>
+<p><strong>세 번째 프롬프트:</strong></p>
+<pre><code>이제 우리 서비스와 비교해주세요.
+우리의 차별화 포인트는 다음과 같습니다:
+[내용 입력]
+
+비교표를 만들어주세요.
+</code></pre>
+<h2 is-upgraded>Step 4: A/B 테스트</h2>
+<p>동일한 질문을 다르게 표현하여 여러 번 물어보고, 가장 좋은 답변을 선택하세요:</p>
+<p><strong>버전 A:</strong></p>
+<pre><code>우리 서비스의 수익 모델을 제안해주세요.
+</code></pre>
+<p><strong>버전 B:</strong></p>
+<pre><code>당신은 성공한 SaaS 스타트업 CEO입니다.
+우리 서비스(매장 음악 제공)의 수익 모델을 3가지 제안하고,
+각 모델의 장단점과 예상 매출을 비교해주세요.
+</code></pre>
+<p>어느 프롬프트가 더 유용한 답변을 생성하나요?</p>
+<aside class="special"><p> **프롬프트 팁**:  - 짧고 간단한 프롬프트 → 빠른 답변, 하지만 일반적인 내용 - 길고 구체적인 프롬프트 → 시간이 걸리지만, 더 맞춤화된 답변 상황에 따라 전략을 선택하세요! </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="발표 및 토론" duration="15">
+        <h2 is-upgraded>발표 준비</h2>
+<p>각자(또는 팀별로) 완성한 사업계획서를 <strong>5분 이내</strong>로 발표할 준비를 하세요.</p>
+<h2 is-upgraded>발표 구조 제안</h2>
+<ol type="1">
+<li><strong>도입 (1분)</strong>: 문제 제기<ul>
+<li>&#34;이런 문제를 발견했습니다&#34;</li>
+</ul>
+</li>
+<li><strong>솔루션 (2분)</strong>: 우리의 서비스<ul>
+<li>핵심 기능 3가지</li>
+<li>차별화 포인트</li>
+</ul>
+</li>
+<li><strong>실행 (1분)</strong>: 어떻게 만들 것인가<ul>
+<li>기술 스택</li>
+<li>일정</li>
+</ul>
+</li>
+<li><strong>마무리 (1분)</strong>: 왜 성공할 것인가<ul>
+<li>시장 기회</li>
+<li>우리의 강점</li>
+</ul>
+</li>
+</ol>
+<h2 is-upgraded>발표 시 공유할 내용</h2>
+<ul>
+<li><strong>프롬프트 경험</strong>: 어떤 프롬프트가 가장 효과적이었나요?</li>
+<li><strong>AI의 한계</strong>: 어떤 부분에서 AI가 도움이 되지 않았나요?</li>
+<li><strong>놀라운 발견</strong>: AI를 사용하면서 예상치 못한 인사이트가 있었나요?</li>
+</ul>
+<h2 is-upgraded>토론 주제</h2>
+<h3 is-upgraded>1. 프롬프트 설계의 어려움</h3>
+<ul>
+<li>가장 어려웠던 점은 무엇인가요?</li>
+<li>어떻게 극복했나요?</li>
+</ul>
+<h3 is-upgraded>2. AI 출력물의 검증</h3>
+<ul>
+<li>AI의 답변 중 잘못된 정보를 발견했나요?</li>
+<li>어떻게 검증했나요?</li>
+</ul>
+<h3 is-upgraded>3. 생성형 AI의 실무 활용</h3>
+<ul>
+<li>취업 준비(자기소개서, 이력서)에 어떻게 활용할 수 있을까요?</li>
+<li>실무에서 생성형 AI가 가장 유용할 분야는?</li>
+</ul>
+<h3 is-upgraded>4. 윤리적 고민</h3>
+<ul>
+<li>AI로 생성한 내용을 &#34;내 것&#34;이라고 할 수 있을까요?</li>
+<li>어디까지가 허용되고, 어디서부터 문제일까요?</li>
+</ul>
+<aside class="special"><p> **발표 팁**: 사업계획서 전체를 읽지 마세요. 핵심 3가지만 명확히 전달하는 것이 훨씬 효과적입니다. </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="정리 및 과제" duration="10">
+        <h2 is-upgraded>핵심 요약</h2>
+<p>이번 강의에서 배운 내용:</p>
+<ol type="1">
+<li>✅ <strong>생성형 AI는 도구다</strong>: AI는 초안을 만들고, 아이디어를 확장하는 데 유용합니다. 하지만 최종 판단은 여러분의 몫입니다.</li>
+<li>✅ <strong>좋은 프롬프트 = 좋은 결과</strong>: 프롬프트 엔지니어링은 연습이 필요합니다. 계속 시도하고 개선하세요.</li>
+<li>✅ <strong>비판적 검증 필수</strong>: AI의 출력물을 무조건 신뢰하지 마세요. 항상 검증하고, 사실을 확인하세요.</li>
+<li>✅ <strong>나만의 스타일로 가공</strong>: AI 출력물을 그대로 사용하지 말고, 여러분의 경험과 관점을 더하세요.</li>
+</ol>
+<h2 is-upgraded>생성형 AI 활용 체크리스트</h2>
+<p>앞으로 생성형 AI를 사용할 때 이 체크리스트를 활용하세요:</p>
+<p><strong>작업 전</strong></p>
+<ul>
+<li>[ ] 명확한 목표가 있는가?</li>
+<li>[ ] 충분한 배경 정보를 제공할 준비가 되었는가?</li>
+<li>[ ] 원하는 결과물의 형식을 정의했는가?</li>
+</ul>
+<p><strong>작업 중</strong></p>
+<ul>
+<li>[ ] 프롬프트가 구체적이고 명확한가?</li>
+<li>[ ] 역할, 맥락, 요청사항을 포함했는가?</li>
+<li>[ ] 만족스럽지 않으면 프롬프트를 수정하고 다시 시도했는가?</li>
+</ul>
+<p><strong>작업 후</strong></p>
+<ul>
+<li>[ ] AI의 답변을 비판적으로 검토했는가?</li>
+<li>[ ] 주요 정보를 사실 확인했는가?</li>
+<li>[ ] 나만의 스타일로 수정했는가?</li>
+<li>[ ] 출처를 명확히 했는가?</li>
+</ul>
+<h2 is-upgraded>과제</h2>
+<p>다음 수업까지 완료해야 할 과제:</p>
+<h3 is-upgraded>필수 과제</h3>
+<p>개인별로 <strong>자신의 전공/희망 직무와 관련된 기획서</strong>를 생성형 AI를 활용하여 작성하세요.</p>
+<p><strong>제출 내용:</strong></p>
+<ol type="1">
+<li>완성된 기획서 (A4 1-2페이지)</li>
+<li>사용한 주요 프롬프트 3-5개</li>
+<li>프롬프트를 어떻게 개선했는지 설명 (200-300자)</li>
+<li>AI 출력물 중 수정한 부분과 이유 (200-300자)</li>
+</ol>
+<p><strong>형식</strong>: Google Docs 또는 PDF로 제출</p>
+<h3 is-upgraded>선택 과제 (추가 점수)</h3>
+<p>다음 중 하나를 선택하여 작성하세요:</p>
+<ol type="1">
+<li><strong>프롬프트 라이브러리</strong>: 내가 유용하게 사용한 프롬프트 10개를 모아 정리</li>
+<li><strong>AI 비교 리포트</strong>: ChatGPT, Gemini, Claude 등 3가지 AI 도구를 사용해보고 장단점 비교</li>
+<li><strong>실패 사례집</strong>: AI가 잘못된 정보를 제공한 사례 3가지와 어떻게 발견/수정했는지</li>
+</ol>
+<h2 is-upgraded>다음 강의 예고</h2>
+<p><strong>5강: 협업·시각화 도구 활용</strong></p>
+<p>다음 시간에는:</p>
+<ul>
+<li>이번에 만든 사업계획서를 <strong>Notion</strong>으로 팀 프로젝트화</li>
+<li><strong>Canva</strong>로 시각적 피치덱 제작</li>
+<li><strong>Excalidraw/Miro</strong>로 아이디어 맵핑</li>
+<li>실제 팀 협업 시뮬레이션</li>
+</ul>
+<p>오늘 만든 사업계획서를 가지고 오세요!</p>
+<h2 is-upgraded>추천 학습 자료</h2>
+<p>더 배우고 싶다면:</p>
+<p><strong>프롬프트 엔지니어링</strong></p>
+<ul>
+<li>OpenAI Prompt Engineering Guide: https://platform.openai.com/docs/guides/prompt-engineering</li>
+<li>Learn Prompting (한글): https://learnprompting.org/ko/docs/intro</li>
+</ul>
+<p><strong>생성형 AI 뉴스</strong></p>
+<ul>
+<li>AI 트렌드 코리아: 최신 AI 소식</li>
+<li>OpenAI Blog: 공식 업데이트</li>
+</ul>
+<p><strong>실습 플랫폼</strong></p>
+<ul>
+<li>ChatGPT Playground: 다양한 모델 테스트</li>
+<li>Hugging Face: 오픈소스 AI 모델 체험</li>
+</ul>
+<aside class="special"><p> **마지막 팁**: 생성형 AI는 계속 발전하고 있습니다. 오늘 배운 내용이 6개월 후에는 구식이 될 수 있습니다. 계속 새로운 도구를 시도하고, 최신 트렌드를 따라가세요! </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="부록: 프롬프트 템플릿 모음" duration="5">
+        <h2 is-upgraded>사업 기획 관련</h2>
+<h3 is-upgraded>시장 조사 템플릿</h3>
+<pre><code>당신은 시장 조사 전문가입니다.
+
+[산업/분야]의 [특정 시장]을 분석해주세요.
+
+포함 내용:
+- 시장 규모와 성장률
+- 주요 플레이어 3-5곳
+- 트렌드 및 기회
+- 위험 요소
+
+[국가/지역] 시장 기준으로 작성해주세요.
+</code></pre>
+<h3 is-upgraded>경쟁 분석 템플릿</h3>
+<pre><code>다음 서비스/제품의 경쟁 분석을 해주세요:
+- 내 서비스: [설명]
+- 타겟: [고객군]
+
+주요 경쟁사 [N]개를 찾아, 다음을 표로 정리해주세요:
+- 회사명/서비스명
+- 핵심 기능
+- 가격
+- 강점/약점
+- 시장 점유율 (추정)
+</code></pre>
+<h3 is-upgraded>비즈니스 모델 템플릿</h3>
+<pre><code>당신은 린 스타트업 전문가입니다.
+
+다음 서비스의 비즈니스 모델을 설계해주세요:
+- 서비스: [설명]
+- 타겟: [고객군]
+- 문제: [해결하려는 문제]
+
+다음 형식으로 작성해주세요:
+1. 가치 제안 (Value Proposition)
+2. 고객 세그먼트
+3. 수익 모델 (3가지 옵션)
+4. 비용 구조
+5. 핵심 지표 (KPI)
+</code></pre>
+<h2 is-upgraded>문서 작성 관련</h2>
+<h3 is-upgraded>요약 템플릿</h3>
+<pre><code>다음 [문서/기사/보고서]를 요약해주세요:
+
+[원문 붙여넣기]
+
+요약 형식:
+- 한 줄 요약 (20자 이내)
+- 핵심 내용 3가지 (각 50자 이내)
+- 시사점 또는 액션 아이템
+</code></pre>
+<h3 is-upgraded>이메일 작성 템플릿</h3>
+<pre><code>다음 상황에 맞는 [공식/비공식] 이메일을 작성해주세요:
+
+발신: [내 역할]
+수신: [상대방 역할]
+목적: [이메일의 목적]
+배경: [간단한 상황 설명]
+요청사항: [상대방에게 바라는 것]
+
+톤: [친근한/공식적/설득적] 
+분량: [짧게/적당히/자세히]
+</code></pre>
+<h2 is-upgraded>학습 관련</h2>
+<h3 is-upgraded>개념 설명 템플릿</h3>
+<pre><code>당신은 [분야] 전문 강사입니다.
+
+&#34;[개념/용어]&#34;를 [대학생/일반인/초등학생] 수준에서 
+이해할 수 있게 설명해주세요.
+
+포함 내용:
+- 간단한 정의 (한 문장)
+- 비유나 예시
+- 실생활 적용 사례
+- 오해하기 쉬운 점
+</code></pre>
+<h3 is-upgraded>면접 준비 템플릿</h3>
+<pre><code>당신은 [산업] 분야의 면접관입니다.
+
+다음 질문에 대한 모범 답변을 작성해주세요:
+질문: [면접 질문]
+
+제 배경:
+- 전공: [전공]
+- 경험: [간단한 경험]
+- 지원 분야: [직무]
+
+답변 형식:
+- STAR 기법 활용 (Situation, Task, Action, Result)
+- 2-3분 분량
+- 구체적인 사례 포함
+</code></pre>
+<p>이 템플릿들을 여러분의 상황에 맞게 수정하여 사용하세요!</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+
+  <script id="codelab-home-override">
+    (function() {
+      var HOME_URL = 'https://damianospark.github.io/peaceful-class/';
+      function apply(target) {
+        var lab = target && target.tagName === 'GOOGLE-CODELAB' ? target : document.querySelector('google-codelab');
+        if (!lab) return;
+        lab.setAttribute('home-url', HOME_URL);
+        try { lab.homeUrl = HOME_URL; } catch (err) {}
+        ['#arrow-back', '#done'].forEach(function(sel) {
+          var anchor = lab.querySelector(sel);
+          if (anchor) {
+            anchor.setAttribute('href', HOME_URL);
+            anchor.onclick = function(evt) {
+              evt.preventDefault();
+              window.location.href = HOME_URL;
+            };
+          }
+        });
+      }
+      document.addEventListener('google-codelab-ready', function(evt) {
+        apply(evt.target);
+      }, { once: false });
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        apply();
+      } else {
+        document.addEventListener('DOMContentLoaded', function() { apply(); });
+      }
+    })();
+  </script>
+
+</body>
+</html>
